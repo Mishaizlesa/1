@@ -1,5 +1,6 @@
 #include<stdio.h>
 #include<string.h>
+#include <locale.h>
 long d=256;
 int q = 65173;
 void search(char pat[], char txt[],long cnt){
@@ -31,6 +32,7 @@ void search(char pat[], char txt[],long cnt){
     }
 }
 int main(){
+    setlocale(LC_ALL, "Russian");
     FILE* input=NULL;
     input=fopen("/Users/mihailkozlov/Downloads/voyna_i_mir.txt","r");
     char p[100000];
